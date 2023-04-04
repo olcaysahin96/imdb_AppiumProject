@@ -23,13 +23,11 @@ public class FilterTest extends BaseTest{
     public void testFilmListCrossCheck() throws InterruptedException {
         searchPage.clickNavigationSearch();
         filterPage.clickTopRatedMovies();
-        Thread.sleep(3000);
         Collection<String> listOne = Arrays.asList(filterPage.firstFilm.getText(),filterPage.secondFilm.getText(),filterPage.thirdFilm.getText());
         filterPage.clickRefine();
         filterPage.clickSortByImdbRatings();
         filterPage.clickNumberOfRatings();
         driver.navigate().back();
-        Thread.sleep(3000);
         Collection<String> listTwo = Arrays.asList(filterPage.firstFilm.getText(),filterPage.secondFilm.getText(),filterPage.thirdFilm.getText());
         Collection<String> similarFilm = new HashSet<String>();
         Collection<String> differentFilm = new HashSet<String>();
