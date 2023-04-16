@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.Description;
 
 public class SearchTest extends BaseTest{
-    public SearchPage searchPage;
+    private SearchPage searchPage;
 
     @BeforeEach
     public void before(){

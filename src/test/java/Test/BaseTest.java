@@ -12,7 +12,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class BaseTest {
-
     protected AppiumDriver driver;
 
     @BeforeEach
@@ -22,8 +21,7 @@ public class BaseTest {
         caps.setCapability("automationName", "UiAutomator2");
         caps.setCapability("deviceName", "s21");
         caps.setCapability("udid", "R5CNC0ZS30F");
-        caps.setCapability("appPackage", "com.imdb.mobile");
-        caps.setCapability("appActivity", "com.imdb.mobile.HomeActivity");
+        caps.setCapability("app", "Users/olcay.sahin/imdb.apk");
         caps.setCapability("autoGrantPermissions", true);
         caps.setCapability("newCommandTimeout", "600");
         this.driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);

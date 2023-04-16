@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Description;
 import java.util.*;
 
 public class FilterTest extends BaseTest{
-    public FilterPage filterPage;
-    public SearchPage searchPage;
+    private FilterPage filterPage;
+    private SearchPage searchPage;
 
     @BeforeEach
     public void before(){
@@ -20,7 +20,7 @@ public class FilterTest extends BaseTest{
 
     @Description("Film listesi karsılastırma testi")
     @Test
-    public void testFilmListCrossCheck() throws InterruptedException {
+    public void testFilmListCrossCheck() {
         searchPage.clickNavigationSearch();
         filterPage.clickTopRatedMovies();
         Collection<String> listOne = Arrays.asList(filterPage.firstFilm.getText(),filterPage.secondFilm.getText(),filterPage.thirdFilm.getText());
