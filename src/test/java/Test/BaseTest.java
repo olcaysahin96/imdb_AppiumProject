@@ -32,6 +32,5 @@ public class BaseTest {
         if (null != this.driver) {
             this.driver.quit();
         }
-
     }
 }
